@@ -2,10 +2,34 @@
 //
 
 #include <iostream>
+#include <bitset>
+#include "AllExercises.h"
+using namespace std;
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	//Ex23
+	unsigned n = 3900;
+	int shift = 3;
+	cout << "No Shift     " << bitset<12>(n) << endl;
+	cout << "Left Shift  " << bitset<12>(circularShift(n, shift, true)) << endl;
+	cout << "Right Shift " << bitset<12>(circularShift(n, shift, false)) << endl;
+
+	//Ex 24
+	cout << "Xor without using the operator ^ : " << xorWithoutUsingOp(13, 5) << endl;
+
+	//Ex 20
+	cout << "Swapping adjacent bits  : " << swap(11) << endl;
+
+	//Ex 41
+	cout << "find its square without using multiplication and division operator  : " << squreWithoutUsingMultOrDivOp(10) << endl;
+
+	//Ex 47
+	cout << "Find max without branching  : " << max(10, 8) << endl;
+	cout << "Find min without branching  : " << min(2, 8) << endl;
+
+	return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
